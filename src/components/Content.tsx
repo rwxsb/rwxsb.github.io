@@ -4,7 +4,6 @@ function Content(){
     return(
         <div className="Content">
             this will have the content
-        </div>
     );
 }
 
