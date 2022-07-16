@@ -3,3 +3,16 @@ languageCode = 'en-us'
 title = 'Suheyb Becerek'
 theme = 'tale'
 
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"
+    weight = 0
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    title = "Posts"
+    url = "/posts/"
+    weight = 0
