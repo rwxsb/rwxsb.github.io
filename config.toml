@@ -6,7 +6,7 @@ theme = 'tale'
   posts = '/:year/:month/:title/'
 
 [Author]
-    name = "Emiel"
+    name = "Suheyb"
 
 [menu]
   [[menu.main]]
