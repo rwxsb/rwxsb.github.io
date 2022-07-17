@@ -2,11 +2,11 @@ baseURL = 'https://sbecerek.github.io/'
 languageCode = 'en-us'
 title = 'Suheyb Becerek'
 theme = 'tale'
-[params]
-  AuthorName = 'Suheyb Becerek'
-  GitHubUser = 'sbecerek'
 [permalinks]
   posts = '/:year/:month/:title/'
+
+[Author]
+    name = "Emiel"
 
 [menu]
   [[menu.main]]
