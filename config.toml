@@ -8,11 +8,6 @@ theme = 'tale'
 [permalinks]
   posts = '/:year/:month/:title/'
 
-
-author =
-  name:         Bexon
-  email:        suheybbecerek@gmail.com
-
 [menu]
   [[menu.main]]
     identifier = "about"
