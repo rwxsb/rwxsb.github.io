@@ -1,11 +1,7 @@
 {{ define "title"}} {{ .Title }} | {{ .Site.Params.author.name }} {{ end }} {{
 define "main" }}
 
-<div>
-    <div class="listHeader">
-        <h1>Posts:</h1>
-    </div>
-
+<div class="contentWrapper">
     {{ with .Content }}
     <div class="listContent">{{- . -}}</div>
     {{ end }}
