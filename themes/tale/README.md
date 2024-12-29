@@ -124,6 +124,10 @@ To enable it, add the `googleAnalytics` tag to your `config.toml`. It will be ad
 googleAnalytics = "UA-133700000-0"
 ```
 
+### OpenGraph
+
+Tale integrates Hugo's embedded OpenGraph template, enabling rich social previews for your page when it's shared as a link. To see how to configure it, consult the [Hugo OpenGraph template documentation](https://gohugo.io/templates/embedded/#configure-open-graph).
+
 ### Custom summaries
 
 Tale allows for writing the summary of your posts manually by setting the `summary` variable in the page frontmatter. If this variable is not set, the summary that Hugo automatically generates will be used.
@@ -150,8 +154,8 @@ This partial is included at the top of the list of posts on the index page, allo
 The copyright message in the footer uses the name of the author of the site, as defined in `config.toml`. For example:
 
 ```
-[Author]
-    name = "Emiel"
+[Params]
+author = { name = "Emiel" }
 ```
 
 ### Additional CSS files
