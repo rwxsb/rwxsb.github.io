@@ -1,37 +1,36 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "title"}} {{ .Title }} | {{ .Site.Params.author.name }} {{ end }} {{
+define "main" }}
 
-<head>
-    <title>
-        {{ i18n "home" }} | {{ .Site.Params.author.name }}
-    </title>
-
-    {{ partial "head.html" . }}
-
-</head>
-
-<body>
-
-    <div class="flexWrapper">
-        {{ partial "header.html" . }}
-
-        <div class="content vertical">
-            <main class="main">
-                <div class="indexWrapper">
-                    <div>
-                        <h1 class="indexHeader">{{ .Site.Params.author.name }}</h1>
-                    </div>
-                    {{ if isset .Site.Params "social" }}
-                        {{ partial "social.html" . }}
-                    {{ end }}
-                </div>
-            </main>
-        </div>
-
-
-        {{ partial "footer.html" . }}
+<div>
+    <div class="listHeader">
+        <h1>Posts</h1>
     </div>
 
-</body>
+    {{ with .Content }}
+    <div class="listContent">{{- . -}}</div>
+    {{ end }}
 
-</html>
+    <div>
+        {{ range .Pages }}
+
+        <a class="postListLink" href="{{ .Permalink }}">
+            <!-- [html-validate-disable-next prefer-native-element] -->
+            <div class="postListItem" role="listitem">
+                <div class="postHeader">
+                    <span class="postTitle">{{ .Title }}</span>
+                    {{ $formattedDate := .Date.Format "2006-01-02" }}
+                    <time class="postDate" datetime="{{ $formattedDate }}"
+                        >{{ .Date | time.Format ":date_long" }}</time
+                    >
+                </div>
+                <div class="postExcerpt">
+                    <p>{{ .Summary }}</p>
+                </div>
+            </div>
+        </a>
+
+        {{end}}
+    </div>
+</div>
+
+{{ end }}
