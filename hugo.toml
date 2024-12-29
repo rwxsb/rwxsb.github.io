@@ -1,0 +1,24 @@
+baseURL = 'https://rwxsb.github.io/'
+languageCode = 'en-us'
+title = 'blog.suheybbecerek.com'
+theme = "nightfall"
+[params]
+user = "rwxsb"
+hostname = "blog.suheybbecerek.com"
+
+  [params.author]
+    name = "Suheyb"
+    email = "suheybbecerek@gmail.com"
+
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/rwxsb"
+target = "_blank" # Defines your target option in a-href. _blank for a new Tab for example.
+aria = "GitHub Profile" # Define the aria label for accessibility like page reader - this is b
+
+[menu]
+  [[menu.header]]
+    name = "posts"
+    weight = 0
+    url = "/posts"
