@@ -1,11 +1,94 @@
-baseURL = 'https://rwxsb.github.io/'
-languageCode = 'en-us'
-title = 'blog.suheybbecerek.com'
-theme = "nightfall"
-[params]
-user = "rwxsb"
-hostname = "blog.suheybbecerek.com"
+baseURL = "https://blog.suheybbecerek.com/"
+languageCode = "en-us"
+title = "Suheyb Becerek"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
 
-  [params.author]
-    name = "Suheyb"
-    email = "suheybbecerek@gmail.com"
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  env = "production"
+  description = "Engineering notes and technical writing by Suheyb Becerek"
+  author = "Suheyb Becerek"
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+  DateFormat = "January 2, 2006"
+
+  [params.homeInfoParams]
+    Title = "Hey, I'm Suheyb"
+    Content = "Engineering notes, technical writing, and things I've learned."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/rwxsb"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/suheybbecerek/"
+
+  [params.assets]
+    disableHLJS = true  # Use Hugo's built-in syntax highlighting
+
+  [params.cover]
+    linkFullImages = true
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+    style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 30
