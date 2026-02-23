@@ -2,8 +2,10 @@ baseURL = "https://blog.suheybbecerek.com/"
 languageCode = "en-us"
 title = "Suheyb Becerek"
 theme = "PaperMod"
-paginate = 10
 enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
 buildDrafts = false
 buildFuture = false
 buildExpired = false
